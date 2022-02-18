@@ -12,7 +12,7 @@ export class SearchService {
   user:any
   constructor(private http:HttpClient) { }
   
-  url="https://www.omdbapi.com/?apikey=d04c9399&plot=full&t="
+  url="https://www.omdbapi.com/?apikey=<YOUR API KEY>&plot=full&t="
   
 
   getMoviesDetails():Observable<any>{
@@ -20,7 +20,7 @@ export class SearchService {
     return this.http.get( `${this.url}${this.searchData}&y=${this.year}&type=${this.type}`)
   }
   getMovieTitle(data:string):Observable<any>{
-    let url1="https://www.omdbapi.com/?apikey=d04c9399&plot=full&s="+data
+    let url1="https://www.omdbapi.com/?apikey=<YOUR API KEY>&plot=full&s="+data
     return this.http.get(url1)
   }
 }
