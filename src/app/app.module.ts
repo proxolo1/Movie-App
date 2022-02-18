@@ -18,14 +18,14 @@ import {AngularFireAuthModule} from '@angular/fire/auth'
 import { AngularFireModule } from '@angular/fire';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 const firebaseConfig = {
-  apiKey: "AIzaSyCzYW7QAONM87s0-gv5IALDIjnlv5niWag",
-  authDomain: "movie-inf0.firebaseapp.com",
-  databaseURL: "https://movie-inf0-default-rtdb.firebaseio.com",
-  projectId: "movie-inf0",
-  storageBucket: "movie-inf0.appspot.com",
-  messagingSenderId: "241323854100",
-  appId: "1:241323854100:web:4413e7782491de1d9b9a01",
-  measurementId: "G-9Q311N9ZGF"
+  apiKey: "Type Your API KEY",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 @NgModule({
   declarations: [
