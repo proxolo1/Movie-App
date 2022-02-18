@@ -1,0 +1,54 @@
+<div class="demo">
+    <div class="secondary">
+       <div class="image text-focus-in">
+          <img src="{{movie.poster}}" alt="No movie"><br><br>
+          <div class=" text-uppercase">
+             <h1>{{movie.Title}}</h1>
+             <span style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Year : {{movie.year}}</span>
+             <br>
+             <div class="text-info text-focus-in" style="padding:30px;">
+                <p>{{movie.plot}}</p>
+             </div>
+             
+          </div>
+       </div>
+       <ul *ngFor="let i of movie.rating" class="text-focus-in">
+          <li>{{i.Source}}</li>
+          <li>{{i.Value}}</li>
+       </ul>
+       <div class="tbl container-fluid text-focus-in">
+          <table class=" table table-bordered table-hover" style="background-color: rgba(23, 146, 19, 0.658);">
+             <thead>
+                <tr>
+                   <td>Actors</td>
+                   <td>Author</td>
+                   <td>Awards</td>
+                   <td>Box Office</td>
+                   <td>Country</td>
+                   <td>Director</td>
+                   <td>Genre</td>
+                   <td>MetaScore</td>
+                   <td>Released</td>
+                   <td>Type</td>
+                   <td>IMDB Rating</td>
+                </tr>
+             </thead>
+             <tbody>
+                <tr>
+                   <td>{{movie.Actors}}</td>
+                   <td>{{movie.author}}</td>
+                   <td>{{movie.awards}}</td>
+                   <td>{{movie.boxOffice}}</td>
+                   <td>{{movie.country}}</td>
+                   <td>{{movie.director}}</td>
+                   <td>{{movie.genre}}</td>
+                   <td>{{movie.metaScore}}</td>
+                   <td>{{movie.released}}</td>
+                   <td>{{movie.type}}</td>
+                   <td>{{movie.imdbRating}}</td>
+                </tr>
+             </tbody>
+          </table>
+       </div>
+    </div>
+ </div>

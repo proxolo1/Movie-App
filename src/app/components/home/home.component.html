@@ -1,0 +1,41 @@
+<link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
+<div id="main" class="main">
+    <div class="secondary kenburns-top">
+
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a class="closebtn" (click)="closeNav()">&times;</a>
+        <a href="about"><i class="fa fa-male"></i>---About Me</a>
+        <a href="advanced"><i class="fas fa-cogs"></i>---Advanced Search</a>
+        <!-- <a href="#">Clients</a>
+        <a href="#">Contact</a> -->
+    </div>
+    <div class=" container">
+        <div class="icon">
+            <span style="font-size:30px;cursor:pointer;color: #ffffff; font-size:50px;" (click)="openNav()"><i
+                    class="fas fa-bars color-change-3x"></i></span>
+        </div>
+        <div class="movie">
+            <h1 align="left" class=" text-capitalize" style="color:hsl(0, 54%, 43%); position:relative; top:20vh;left:10%; overflow:hidden;font-size:3vh;"><b><code>Hi {{searchService.user}} welcome to our website</code></b></h1>
+            <form class="" [formGroup]="formGroup">
+                <div class="search">
+                    <mat-form-field class=" form-control demo" style="border-radius: 30px; background-color: #9199c4; border: none; padding: 0px 20px 0px 20px; ">
+                        <input type="text" formControlName="ajay" matInput placeholder="Search movies"
+                            [matAutocomplete]="auto" style="padding: 10px 5px 10px 5px;">
+
+                        <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option *ngFor="let item of options" [value]="item">
+                                {{item}} 
+                            </mat-option>
+                        </mat-autocomplete>
+
+                    </mat-form-field>
+                    <button class="btn search-btn" (click)="movieDetails()"><i
+                            class="fas fa-2x fa-search rotate-center" style="color: rgba(27, 216, 84, 0.644);"></i></button>
+                </div>
+            </form>
+           
+        </div>
+
+    </div>
+</div>
